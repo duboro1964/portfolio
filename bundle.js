@@ -37,7 +37,7 @@ var COLORS      = [GREEN, PINK, YELLOW, BLUE]
 /*-----------------------------------------------------------------------------
   LOADING DATA
 -----------------------------------------------------------------------------*/
-minixhr('https://api.github.com/users/duboro1964, responseHandler1)
+minixhr('https://api.github.com/users/coatorima95', responseHandler1)
 function responseHandler1 (data) {
   document.body.appendChild(webpage({
     data: JSON.parse(data),
