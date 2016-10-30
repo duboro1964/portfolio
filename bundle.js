@@ -37,7 +37,7 @@ var COLORS      = [GREEN, PINK, YELLOW, BLUE]
 /*-----------------------------------------------------------------------------
   LOADING DATA
 -----------------------------------------------------------------------------*/
-minixhr('https://api.github.com/users/esova-ana', responseHandler1)
+minixhr('https://api.github.com/users/duboro', responseHandler1)
 function responseHandler1 (data) {
   document.body.appendChild(webpage({
     data: JSON.parse(data),
@@ -212,7 +212,7 @@ function portfolioComponent ({ data = {}, theme = {} } = {}) {
               Portfolio: Moj kviz
             </div>
             <div class="${css.portfolioBody}">
-              Moj kviz je aplikacija gde korisnici mogu odgovoriti na skali od 1 do 6 na razna pitanja i da uporede odgovore sa drugima. Odgovori se prikupljaju u bazi podataka i omogucava administaratora da ima uvid u sve odgovore.
+              Moj kviz je aplikacija gde korisnici mogu odgovoriti na skali od 1 do 6 na razna pitanja i da uporede odgovore sa drugima. Odgovori se prikupljaju u bazi podataka i omogućava administaratora da ima uvid u sve odgovore.
              </div>
           </div>
         </div>
@@ -228,7 +228,7 @@ function portfolioComponent ({ data = {}, theme = {} } = {}) {
               Portfolio: Moj kviz
             </div>
             <div class="${css.portfolioBody_isHover}">
-              Moj kviz je aplikacija gde korisnici mogu odgovoriti na skali od 1 do 6 na razna pitanja i da uporede odgovore sa drugima. Odgovori se prikupljaju u bazi podataka i omogucava administaratora da ima uvid u sve odgovore.
+              Moj kviz je aplikacija gde korisnici mogu odgovoriti na skali od 1 do 6 na razna pitanja i da uporede odgovore sa drugima. Odgovori se prikupljaju u bazi podataka i omogućava administaratora da ima uvid u sve odgovore.
              </div>
           </div>
         </div>
@@ -264,7 +264,7 @@ function textboxComponent ({ data = {}, theme = {} } = {}) {
     return yo`
       <div>
         <div class="${css.textbox}">
-          Pogledajte moj rad i ostanimo u kontaktu. Mozemo se naci na kafi i razgovarati o cudesom svetu programiranja. Pozdrav! 
+          Pogledajte moj rad i ostanimo u kontaktu. Možemo se naći na kafi i razgovarati o čudesom svetu programiranja. Pozdrav! 
         </div>
       </div>
     `
