@@ -37,7 +37,7 @@ var COLORS      = [GREEN, PINK, YELLOW, BLUE]
 /*-----------------------------------------------------------------------------
   LOADING DATA
 -----------------------------------------------------------------------------*/
-minixhr('https://api.github.com/users/duboro1964, responseHandler1)
+minixhr('https://api.github.com/users/esova-ana', responseHandler1)
 function responseHandler1 (data) {
   document.body.appendChild(webpage({
     data: JSON.parse(data),
@@ -75,20 +75,20 @@ function webpage ({ data = {}, theme = {} } = {}) {
   var css = csjs`
     body {
       text-align: center;
-      background-color: ${theme.blue};
+      background-color: ${theme.green};
       color: ${theme.black};
       font-family: ${theme.font};
     }
     h1 {
       margin-top: 1em;
       color: ${theme.grey};
-      font-size: 4em;
+      font-size: 3em;
       font-weight: bold;
       text-transform: uppercase;
     }
   	h3 {
       color: ${theme.grey};
-      font-size: 3em;
+      font-size: 4em;
       margin-bottom: 3em;
     }
     img {
@@ -98,28 +98,28 @@ function webpage ({ data = {}, theme = {} } = {}) {
       width: 15em;
     }
   	@-webkit-keyframes bounce {
-      0% {
+	0% {
         bottom: 50px;
       }
-      70% {
-        bottom: 100px;
+      0% {
+        bottom: 0px;
         color: ${theme.lightGrey};
       }
-      100% {
+      50% {
         bottom: 50px;
       }
     }
     .arrow {
       position: relative;
       font-size: 3em;
-      color: ${theme.black};
+      color: ${theme.grey};
       animation: bounce 2s infinite
     }
   `
   function template () {
   	return yo`
       <div>
-      	<img src="${data.avatar_url}">
+      	<img src="https://avatars3.githubusercontent.com/u/18083047?v=3">
         <h1>${data.name}</h1>
         <h3>${data.bio}</h3>
         <div>
@@ -146,8 +146,8 @@ function portfolioComponent ({ data = {}, theme = {} } = {}) {
     .portfolioItem     {
       width            : 100%;
       padding-bottom   : 200px;
-    	background-color : ${theme.black};
-      color            : ${theme.red};
+    	background-color : ${theme.blue};
+      color            : ${theme.grey};
       display          : flex;
       flex-direction   : column;
       align-items      : flex-start;
@@ -156,8 +156,8 @@ function portfolioComponent ({ data = {}, theme = {} } = {}) {
     .portfolioItem_isHover {
       width                : 100%;
       padding-bottom       : 200px;
-    	background-color     : ${theme.black};
-      color                : ${theme.red};
+    	background-color     : ${theme.green};
+      color                : ${theme.grey};
       display              : flex;
       flex-direction       : column;
       align-items          : flex-start;
@@ -169,9 +169,9 @@ function portfolioComponent ({ data = {}, theme = {} } = {}) {
       padding          : 0.5em;
       font-size        : 3em;
       color            : ${theme.black};
-      background-color : ${theme.green};
+      background-color : ${theme.yellow};
       border-radius    : 4px;
-      border           : 4px solid ${theme.green};
+      border           : 4px solid ${theme.yellow};
       transition       : 2s;
     }
     .portfolioTitle_isHover {
@@ -179,7 +179,7 @@ function portfolioComponent ({ data = {}, theme = {} } = {}) {
       padding               : 0.5em;
       font-size             : 3em;
       color                 : ${theme.white};
-      background-color      : ${theme.yellow};
+      background-color      : ${theme.green};
       border-radius         : 4px;
       border                : 4px solid ${theme.grey};
       transition            : 2s;
@@ -209,11 +209,10 @@ function portfolioComponent ({ data = {}, theme = {} } = {}) {
         <div class="${css.portfolio}">
           <div class="${css.portfolioItem}">
             <div class="${css.portfolioTitle}">
-              Portfolio: Moj Kviz
+              Portfolio: Moj kviz
             </div>
             <div class="${css.portfolioBody}">
-              Moj Kviz je program gde mozete glasati i
-              uporediti vase odgovore sa odgovorima drugih.
+              Moj kviz je aplikacija gde korisnici mogu odgovoriti na skali od 1 do 6 na razna pitanja i da uporede odgovore sa drugima. Odgovori se prikupljaju u bazi podataka i omogucava administaratora da ima uvid u sve odgovore.
              </div>
           </div>
         </div>
@@ -226,11 +225,10 @@ function portfolioComponent ({ data = {}, theme = {} } = {}) {
         <div class="${css.portfolio}">
           <div class="${css.portfolioItem_isHover}">
             <div class="${css.portfolioTitle_isHover}">
-              Portfolio: Moj Kviz
+              Portfolio: Moj kviz
             </div>
             <div class="${css.portfolioBody_isHover}">
-              Moj Kviz je program gde mozete glasati i
-              uporediti vase odgovore sa odgovorima drugih.
+              Moj kviz je aplikacija gde korisnici mogu odgovoriti na skali od 1 do 6 na razna pitanja i da uporede odgovore sa drugima. Odgovori se prikupljaju u bazi podataka i omogucava administaratora da ima uvid u sve odgovore.
              </div>
           </div>
         </div>
@@ -266,7 +264,7 @@ function textboxComponent ({ data = {}, theme = {} } = {}) {
     return yo`
       <div>
         <div class="${css.textbox}">
-          Pogledajte moj rad i slobodno me konraktirajte. Pozdrav.
+          Pogledajte moj rad i ostanimo u kontaktu. Mozemo se naci na kafi i razgovarati o cudesom svetu programiranja. Pozdrav! 
         </div>
       </div>
     `
@@ -304,10 +302,10 @@ function footerComponent ({ data = {}, theme = {} } = {}) {
       <a href="mailto:duboro1964@gmail.com">
         <i class="${css.icon} fa fa-envelope-o" aria-hidden="true"></i>
       </a>
-      <a href="https://sr-rs.facebook.com/estradabec/">
+      <a href="https://sr-rs.facebook.com/E-Sova-1040698875990332/">
        <i class="${css.icon} fa fa-facebook" aria-hidden="true"></i>
       </a>
-       <a href="https://www.instagram.com/julestrada/?hl=en/">
+       <a href="https://www.instagram.com/esova/">
          <i class="${css.icon} fa fa-instagram" aria-hidden="true"></i>
          </a>
     </div>
